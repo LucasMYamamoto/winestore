@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        Rebing\GraphQL\GraphQLServiceProvider::class,
 
     ],
 
@@ -231,6 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'GraphQL' => Rebing\GraphQL\Support\Facades\GraphQL::class,
+
         
 
     ],

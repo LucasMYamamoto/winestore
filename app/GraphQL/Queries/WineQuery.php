@@ -2,8 +2,7 @@
 
 namespace App\GraphQL\Queries;
 
-
-use App\Models\Wine as ModelsWine;
+use App\Models\Wine;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 use Rebing\GraphQL\Support\Facades\GraphQL;
@@ -14,7 +13,7 @@ class WineQuery extends Query
         'name' => 'wine',
     ];
 
-    public function type()
+    public function type():Type
     {
         return GraphQL::type('Wine');
     }
@@ -32,6 +31,6 @@ class WineQuery extends Query
 
     public function resolve($root, $args)
     {
-        return ModelsWine::findOrFail($args['id']);
+        return Wine::findOrFail($args['id']);
     }
 }
